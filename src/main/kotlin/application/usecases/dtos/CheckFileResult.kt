@@ -4,14 +4,10 @@ import domain.enums.CheckSumAlgorithms
 
 data class CheckFileResult(
     val data: ByteArray?,
-    val resultHash: CheckSumHash?,
-    val inputHash: CheckSumHash
-) {
-    val isValid: Boolean
-        get() = this.resultHash.equals(this.inputHash)
-}
+    val resultHash: CheckSumHash
+)
 
 data class CheckSumHash(
     val algorithm: CheckSumAlgorithms,
-    val checkSum: String
+    val checkSum: String? = null
 )

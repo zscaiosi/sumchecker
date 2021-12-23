@@ -1,7 +1,7 @@
 package domain.enums
 
-enum class CheckSumAlgorithms {
-    SHA256,
-    SHA512,
-    MD5
+enum class CheckSumAlgorithms(val description: String) {
+    SHA256("SHA-256"),
+    SHA1("SHA-1"),
+    MD5("MD5")
 }
