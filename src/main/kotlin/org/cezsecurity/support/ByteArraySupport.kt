@@ -1,4 +1,4 @@
-package support
+package org.cezsecurity.support
 
 private val HEX_CHARS = "0123456789ABCDEF".toCharArray()
 

@@ -1,4 +1,4 @@
-package domain
+package org.cezsecurity.domain
 
 interface SumChecker {
     fun calculateSum(content: ByteArray): String

@@ -1,7 +1,7 @@
-package domain.factories
+package org.cezsecurity.domain.factories
 
-import domain.MD5Checker
-import domain.enums.CheckSumAlgorithms
+import org.cezsecurity.domain.MD5Checker
+import org.cezsecurity.domain.enums.CheckSumAlgorithms
 
 class MD5Checker : SumCheckerFactory() {
     private lateinit var md5Checker: MD5Checker

@@ -1,3 +1,5 @@
+package org.cezsecurity
+
 fun main(args: Array<String>) {
     println("Hello World!")
 

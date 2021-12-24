@@ -1,6 +1,6 @@
-package adapters.gateways
+package org.cezsecurity.adapters.gateways
 
-import application.ports.out.FileProvider
+import org.cezsecurity.application.ports.out.FileProvider
 
 class RemoteFileProvider: FileProvider {
     override fun find(host: String, name: String): ByteArray {

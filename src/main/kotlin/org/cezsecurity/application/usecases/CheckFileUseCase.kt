@@ -1,9 +1,9 @@
-package application.usecases
+package org.cezsecurity.application.usecases
 
-import application.ports.out.FileProvider
-import application.usecases.dtos.CheckFileCommand
-import application.usecases.dtos.CheckFileResult
-import application.usecases.dtos.CheckSumHash
+import org.cezsecurity.application.ports.out.FileProvider
+import org.cezsecurity.application.usecases.dtos.CheckFileCommand
+import org.cezsecurity.application.usecases.dtos.CheckFileResult
+import org.cezsecurity.application.usecases.dtos.CheckSumHash
 import java.lang.Exception
 
 class CheckFileUseCase(val fileProvider: FileProvider) : UseCase<CheckFileCommand, CheckFileResult> {

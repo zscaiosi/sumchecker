@@ -1,10 +1,10 @@
-package domain
+package org.cezsecurity.domain
 
-import domain.enums.CheckSumAlgorithms.SHA256
-import support.toHexString
+import org.cezsecurity.domain.enums.CheckSumAlgorithms
+import org.cezsecurity.support.toHexString
 import java.security.MessageDigest
 
-class SHA256Checker : SumChecker {
+class MD5Checker : SumChecker {
     override fun calculateSum(content: ByteArray): String =
         if (content.isEmpty()) {
             throw IllegalArgumentException("EMPTY BYTE ARRAY")
@@ -21,7 +21,7 @@ class SHA256Checker : SumChecker {
     }
 
     private fun getDigestFromContent(content: ByteArray): String {
-        val messageDigest = MessageDigest.getInstance(SHA256.description)
+        val messageDigest = MessageDigest.getInstance(CheckSumAlgorithms.MD5.description)
 
         messageDigest.update(content)
 

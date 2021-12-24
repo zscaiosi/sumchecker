@@ -1,7 +1,7 @@
-package domain.factories
+package org.cezsecurity.domain.factories
 
-import domain.SHA256Checker
-import domain.enums.CheckSumAlgorithms
+import org.cezsecurity.domain.SHA256Checker
+import org.cezsecurity.domain.enums.CheckSumAlgorithms
 
 class SHA256CheckerFactory : SumCheckerFactory() {
     private lateinit var sha256Checker: SHA256Checker

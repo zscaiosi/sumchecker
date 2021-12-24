@@ -26,5 +26,9 @@ tasks.withType<KotlinCompile>() {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("org.cezsecurity.MainKt")
+}
+
+sourceSets.main {
+    java.srcDirs("src/main/kotlin")
 }

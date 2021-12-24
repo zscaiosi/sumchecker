@@ -1,6 +1,6 @@
-package application.usecases.dtos
+package org.cezsecurity.application.usecases.dtos
 
-import domain.enums.CheckSumAlgorithms
+import org.cezsecurity.domain.enums.CheckSumAlgorithms
 
 data class CheckFileResult(
     val data: ByteArray?,

@@ -1,4 +1,4 @@
-package domain.enums
+package org.cezsecurity.domain.enums
 
 enum class CheckSumAlgorithms(val description: String) {
     SHA256("SHA-256"),

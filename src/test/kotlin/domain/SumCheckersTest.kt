@@ -1,6 +1,10 @@
 package domain
 
 import BaseTest
+import org.cezsecurity.domain.SumChecker
+import org.cezsecurity.domain.SHA256Checker
+import org.cezsecurity.domain.SHA1Checker
+import org.cezsecurity.domain.MD5Checker
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import kotlin.test.assertTrue

@@ -1,10 +1,11 @@
 package adapters.controllers
 
 import BaseTest
+import org.cezsecurity.application.usecases.UseCase
+import org.cezsecurity.application.usecases.dtos.CheckFileCommand
+import org.cezsecurity.application.usecases.dtos.CheckFileResult
+import org.cezsecurity.adapters.controllers.FileController
 import org.junit.jupiter.api.*;
-import application.usecases.UseCase
-import application.usecases.dtos.CheckFileCommand
-import application.usecases.dtos.CheckFileResult
 import io.mockk.mockk
 
 class FileControllerTest: BaseTest() {
