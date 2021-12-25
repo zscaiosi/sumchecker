@@ -16,7 +16,7 @@ class SHA256Checker : SumChecker {
         if (content.isEmpty() || underCheckSum.isEmpty()) {
             throw IllegalArgumentException("INVALID INPUTS")
         } else {
-            return underCheckSum.equals(getDigestFromContent(content), ignoreCase = true)
+            return underCheckSum.equals(calculateSum(content), ignoreCase = true)
         }
     }
 
