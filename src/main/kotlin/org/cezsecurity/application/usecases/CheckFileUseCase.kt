@@ -13,6 +13,7 @@ import org.cezsecurity.domain.enums.CheckSumAlgorithms.MD5
 import org.cezsecurity.domain.factories.MD5CheckerFactory
 import org.cezsecurity.domain.factories.SHA1CheckerFactory
 import org.cezsecurity.domain.factories.SHA256CheckerFactory
+import java.io.IOException
 import kotlin.Exception
 
 class CheckFileUseCase(val fileProvider: FileProvider) : UseCase<CheckFileCommand, CheckFileResult> {
@@ -22,7 +23,6 @@ class CheckFileUseCase(val fileProvider: FileProvider) : UseCase<CheckFileComman
             if (file.isEmpty()) throw UseCaseException("File could not be found")
 
             val checker = setupBusinessRule(command.algorithm)
-
             return CheckFileResult(
                 file,
                 CheckSumHash(
@@ -30,7 +30,7 @@ class CheckFileUseCase(val fileProvider: FileProvider) : UseCase<CheckFileComman
                     checker.calculateSum(file)
                 )
             )
-        } catch (e: Exception) {
+        } catch (e: IOException) {
             println(e.message)
 
             throw UseCaseException("Failed checking file because ${e.message}")

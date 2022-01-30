@@ -1,7 +1,6 @@
 package application.usecases
 
 import BaseTest
-import io.mockk.InternalPlatformDsl.toArray
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
